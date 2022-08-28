@@ -1,4 +1,5 @@
 <?php
+namespace DesignPattern\composite;
 
 interface compositeInterface{
 

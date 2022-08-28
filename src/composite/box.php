@@ -1,6 +1,6 @@
 <?php
+namespace DesignPattern\composite;
 
-include_once('compositeInterface.php');
 class Box implements compositeInterface{
 
     protected $parts = [];
@@ -16,5 +16,9 @@ class Box implements compositeInterface{
             $weight+= $part->weight(); 
         }
         return $weight;
+    }
+
+    function parts(){
+        return $this->parts;
     }
 }

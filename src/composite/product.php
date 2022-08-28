@@ -1,6 +1,6 @@
 <?php
+namespace DesignPattern\composite;
 
-include_once('compositeInterface.php');
 class Product implements compositeInterface{
 
     protected $weight;
