@@ -10,13 +10,13 @@ $ docker run -it --rm --name my-running-app my-php-app
 
 2) Run each PHP script "example.php" from every folder. Examples:
 
-$ docker run -it --rm --name my-running-script -v "$PWD":/usr/src/myapp -w /usr/src/myapp php:7.4-cli php factory/example.php
+$ docker run -it --rm --name my-running-script -v "$PWD":/usr/src/myapp -w /usr/src/myapp php:7.4-cli php src/factory/example.php
 
-$ docker run -it --rm --name my-running-script -v "$PWD":/usr/src/myapp -w /usr/src/myapp php:7.4-cli php abstract-factory/example.php
+$ docker run -it --rm --name my-running-script -v "$PWD":/usr/src/myapp -w /usr/src/myapp php:7.4-cli php src/abstract-factory/example.php
 
-$ docker run -it --rm --name my-running-script -v "$PWD":/usr/src/myapp -w /usr/src/myapp php:7.4-cli php singleton/example.php
+$ docker run -it --rm --name my-running-script -v "$PWD":/usr/src/myapp -w /usr/src/myapp php:7.4-cli php src/singleton/example.php
 
-$ docker run -it --rm --name my-running-script -v "$PWD":/usr/src/myapp -w /usr/src/myapp php:7.4-cli php composite/example.php
+$ docker run -it --rm --name my-running-script -v "$PWD":/usr/src/myapp -w /usr/src/myapp php:7.4-cli php src/composite/example.php
 
 For running the php unit test:
 
@@ -24,7 +24,7 @@ Use the docker-compose.yml file.
 
 1) Download the vendor folder:
 
-$ docker-compose run require --dev \
+$ docker-compose run composer require --dev \
   phpunit/phpunit
 
 2) Check the php unit version:
